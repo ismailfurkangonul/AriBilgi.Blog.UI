@@ -1,0 +1,45 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="row" ng-controller="DetailController">
+
+    <div class="col-md-12">
+        <img src="https://sswtv2.wpengine.com/wp-content/uploads/2018/06/C-Banner-1100x200-v2.jpg" style="width:100%" />
+    </div>
+    <div class="col-md-12">
+        <div class="row">
+            <div class="col-md-4 text-center">
+              {{article.user.name}} {{article.user.name}}
+            </div>
+            <div class="col-md-4 text-center">
+             {{article.category.title}}
+            </div>
+            <div class="col-md-4 text-center">
+              {{article.createdDate}}
+            </div>
+        </div>
+    </div>
+    <div class="col-md-12 mt-5 mb-5">
+        <h1>{{article.title}}</h1>
+    </div>
+
+    <div class="col-md-12">
+        <p>
+           {{article.content}}
+        </p>
+    </div>
+    <div class="col-md-8 mt-5">
+        <h3>Yorumlar</h3>
+        <div class="col-md-12" ng-repeat="comment in article.comments">
+        {{comment.content}}
+        </div>
+
+    </div>
+
+
+
+</div>
+
+@section Scripts{
+    <script src="~/articleDetail.js"></script>
+  }
